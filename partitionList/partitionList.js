@@ -12,8 +12,9 @@
  * @param {number} x
  * @return {ListNode}
  */
- const partition = (head, x) => {
 
+const partition = (head, x) => {
+  return 1;
 }
 
 export default partition;

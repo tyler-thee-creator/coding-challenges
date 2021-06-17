@@ -13,7 +13,14 @@
  * @return {ListNode}
  */
 
-const partition = (head, x) => {
+export class ListNode {
+  constructor(val, next) {
+    this.val = (val===undefined ? 0 : val);
+    this.next = (next===undefined ? null : next);
+  }
+}
+
+export const partition = (head, x) => {
   if (head === null) {
     return head;
   }
@@ -47,5 +54,3 @@ const partition = (head, x) => {
 
   return newHead;
 }
-
-export default partition;

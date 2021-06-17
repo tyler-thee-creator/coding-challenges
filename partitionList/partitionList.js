@@ -13,7 +13,11 @@
  * @return {ListNode}
  */
 
- const partition = (head, x) => {
+const partition = (head, x) => {
+  if (head === null) {
+    return head;
+  }
+
   const listToArray = [];
   let node = head;
 
@@ -33,9 +37,15 @@
   });
 
   const orderedNodes = lesserNodes.concat(greaterNodes);
-  console.log(orderedNodes);
+  const newHead = new ListNode(orderedNodes[0]);
+  let currentHead = newHead;
 
-  //re-create linkedList with newly ordered array
+  for (let i = 1; i < orderedNodes.length; i++) {
+    currentHead.next = new ListNode(orderedNodes[i]);
+    currentHead = currentHead.next;
+  }
+
+  return newHead;
 }
 
 export default partition;

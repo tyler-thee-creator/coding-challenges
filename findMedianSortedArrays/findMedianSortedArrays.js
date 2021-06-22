@@ -19,3 +19,5 @@
 
   return median;
 }
+
+export default findMedianSortedArrays;

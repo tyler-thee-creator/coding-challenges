@@ -28,3 +28,5 @@ const strStr = (haystack, needle) => {
 
   return -1;
 }
+
+export default strStr;

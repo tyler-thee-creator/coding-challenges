@@ -22,3 +22,5 @@
 
   return flippedImage;
 }
+
+export default flipAndInvertImage;

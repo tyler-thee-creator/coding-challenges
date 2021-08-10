@@ -8,15 +8,22 @@
 
 const restoreString = (s, indices) => {
   let max = 0;
-  const returnString = '';
+  let returnString = '';
   const sObj = {};
 
   for (let i = 0; i < s.length; i++) {
-      s[i] > max ? max = s[i] : null;
-      sObj[indices[i]] = s[i];
+    indices[i] > max ? max = indices[i] : null;
+    sObj[indices[i]] = s[i];
   }
 
-  console.log(max, sObj);
+  let current = 0;
+
+  while (current <= max) {
+    returnString += sObj[current];
+    current++;
+  }
+
+  return returnString;
 }
 
 export default restoreString;

@@ -6,7 +6,17 @@
  */
 
 const singleNumber = (nums) => {
-  // code
+  const occurrences = {};
+
+  nums.map((num) => {
+    occurrences[num] ? occurrences[num]++ : occurrences[num] = 1;
+  });
+
+  for (let key in occurrences) {
+    if (occurrences[key] === 1) {
+      return key;
+    }
+  }
 }
 
 export default singleNumber;

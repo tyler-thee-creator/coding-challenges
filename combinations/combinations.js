@@ -7,7 +7,6 @@
  */
 
  const combine = (n, k, index = 1, curr = [], paths = []) => {
-  debugger;
   if (curr.length === k) {
     paths.push(curr)
     return paths

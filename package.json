@@ -2,8 +2,10 @@
   "name": "coding-challenges",
   "version": "1.0.0",
   "description": "",
+  "type": "module",
   "main": "index.js",
   "scripts": {
+    "new-problem": "mkdir -p $npm_config_dir && echo 'const '$npm_config_dir' = (args) => {\n  // code\n}\n\nexport default '$npm_config_dir';' > $npm_config_dir/$npm_config_dir.js && echo > $npm_config_dir/$npm_config_dir.test.js",
     "test": "jest"
   },
   "jest": {
@@ -23,8 +25,10 @@
   },
   "homepage": "https://github.com/tyler-thee-creator/coding-challenges#readme",
   "devDependencies": {
-    "@babel/preset-env": "^7.14.5",
-    "babel-jest": "^27.0.2",
-    "jest": "^27.0.4"
+    "@babel/cli": "^7.21.0",
+    "@babel/core": "^7.21.0",
+    "@babel/preset-env": "^7.20.2",
+    "babel-jest": "^27.5.1",
+    "jest": "^27.5.1"
   }
 }
